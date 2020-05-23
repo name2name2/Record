@@ -49,7 +49,6 @@ PCMan程式專案建置和執行：逐步解說
    * 在 Combo 專案 > 右鍵 > Build(建置) ，等待建置成功
    * 在 Lite 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `;本機Git資料夾\pcman-windows\Lite\cpprest141_2_10d.lib` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
    * 在 Lite 專案 > 右鍵 > Build(建置) ，等待建置成功
-   * 將 Lite 或 Combo 專案 > 右鍵 > Set as StartUp Project(建置) > 按下F5 ， 即可執行程式，出現PCMan的程式畫面
 
 1. 執行 PCMan
    * 在 Lite 或 Combo 專案 > 右鍵 > Set as StartUp Project(設定為起始專案) > 按下 F5 ， 即可執行出現PCMan的程式畫面
