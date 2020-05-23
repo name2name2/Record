@@ -42,16 +42,17 @@ PCMan程式專案建置和執行：逐步解說
    * 建置成功後，會有一些`.dll .lib`等等檔案輸出到`\build.x32v141\Binaries\Debug`，全部的檔案有`cpprest141_2_10d.dll libcrypto-1_1.dll libssl-1_1.dll zlibd1.dll cpprest141_2_10d.exp cpprest141_2_10d.ilk cpprest141_2_10d.lib cpprest141_2_10d.pdb`
    * 將這些檔案複製到 `本機Git資料夾\pcman-windows\Lite` 和 `本機Git資料夾\pcman-windows\Combo` 
    
-1. 設定/建置/執行PCMan專案
+1. 設定/建置PCMan專案
    * 用 visual studio 開啟 `本機Git資料夾\pcman-windows\PCMan.sln`
    * 開啟後等待 visual studio 載入，等到左下角訊息不再變動
    * 在 Combo 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `本機Git資料夾\pcman-windows\Combo\cpprest141_2_10d.lib;` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
    * 在 Combo 專案 > 右鍵 > Build(建置) ，等待建置成功
-   * 在 Lite 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `本機Git資料夾\pcman-windows\Lite\cpprest141_2_10d.lib;` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
+   * 在 Lite 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `;本機Git資料夾\pcman-windows\Lite\cpprest141_2_10d.lib` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
    * 在 Lite 專案 > 右鍵 > Build(建置) ，等待建置成功
    * 將 Lite 或 Combo 專案 > 右鍵 > Set as StartUp Project(建置) > 按下F5 ， 即可執行程式，出現PCMan的程式畫面
 
-.
+1. 執行 PCMan
+   * 在 Lite 或 Combo 專案 > 右鍵 > Set as StartUp Project(設定為起始專案) > 按下 F5 ， 即可執行出現PCMan的程式畫面
 
 
 [註1] : 我原本先把vcpkg裝在E:\ ，然後跑`integrate install`會出現`Warning: integration was not applied`訊息，雖然看到Warning先繼續安裝相關的套件完成，安裝完成後發現在visual studio裡面的cpp檔相關的`#include`還是會出現紅線錯誤。後來搜尋 https://github.com/Microsoft/vcpkg/issues/5956 提到
