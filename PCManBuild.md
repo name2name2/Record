@@ -40,7 +40,7 @@ PCMan程式專案建置和執行：逐步解說
    * 等待 visual studio 載入專案，左下角如有` Parsing Include ... Scanning Include ...` 訊息，耐心等候直到左下角訊息停止變動，出現`就緒 Ready`訊息
    * 在 cpprest 專案 > 右鍵 > Build(建置) ，等待建置成功
    * 建置成功後，會有一些`.dll .lib`等等檔案輸出到`\build.x32v141\Binaries\Debug`，全部的檔案有`cpprest141_2_10d.dll libcrypto-1_1.dll libssl-1_1.dll zlibd1.dll cpprest141_2_10d.exp cpprest141_2_10d.ilk cpprest141_2_10d.lib cpprest141_2_10d.pdb`
-   * 將這些檔案分別複製到 `本機Git資料夾\pcman-windows\Lite` 和 `本機Git資料夾\pcman-windows\Combo` 
+   * 將這些檔案複製到 `本機Git資料夾\pcman-windows\Lite` 和 `本機Git資料夾\pcman-windows\Combo` 
    
 1. 設定/建置/執行PCMan專案
    * 用 visual studio 開啟 `本機Git資料夾\pcman-windows\PCMan.sln`
