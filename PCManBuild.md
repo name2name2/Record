@@ -16,7 +16,7 @@ PCMan程式專案建置和執行：逐步解說
    * 執行完成後會出現 vcpkg\vcpkg.exe
    * 開啟cmd，執行`cd /d 本機Git資料夾\vcpkg`，再執行`vcpkg integrate install`
       * 正確會印出訊息 `Applied user-wide integration for this vcpkg root.` 
-      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [#註1](#reamrk)
+      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [[註1]](#remark)
 
 1. 使用vcpkg安裝套件
    * 將cmd的路徑保持在`本機Git資料夾\vcpkg`，以下開始用cmd安裝x86版本的pacakage
@@ -32,7 +32,7 @@ PCMan程式專案建置和執行：逐步解說
 
 1. 取得cpprestsdk相關的dll lib檔 
    * cmd 執行 `cd /d 本機Git資料夾\cpprestsdk`
-   * 執行 `mkdir build.x32v141` [註2]
+   * 執行 `mkdir build.x32v141` [[註2]](#remark)
    * 執行 `cd build.x32v141`
    * 執行 `"C:\Program Files\CMake\bin\cmake.exe" ../Release -A Win32 -DCMAKE_TOOLCHAIN_FILE=本機Git資料夾/vcpkg/scripts/buildsystems/vcpkg.cmake`
       * 正確完成會印出訊息 `Build files have been written to: 本機Git資料夾/cpprestsdk/build.x32v141`
