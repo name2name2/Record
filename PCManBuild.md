@@ -55,6 +55,6 @@ PCMan程式專案建置和執行：逐步解說
 
 
 [註1] : 我原本先把vcpkg裝在E:\ ，然後跑`integrate install`會出現`Warning: integration was not applied`訊息，雖然看到Warning先繼續安裝相關的套件完成，安裝完成後發現在visual studio裡面的cpp檔相關的`#include`還是會出現紅線錯誤。後來搜尋 https://github.com/Microsoft/vcpkg/issues/5956 提到
-`I have reinstalled vcpkg directly to the c-drive and now it is working, even if I don't know why. Thank you for the support.`，我改放到C:\底下，重新執行`integrate install`就得到`Applied user-wide integration for this vcpkg root.`訊息，cpp檔裡面的`#include`也正常了。
+`I have reinstalled vcpkg directly to the c-drive and now it is working, even if I don't know why. Thank you for the support.`，我改放到C:\底下，重新執行`integrate install`就得到`Applied user-wide integration for this vcpkg root.`訊息，cpp檔裡面的`#include`也正常了。但是刪掉vcpkg在重裝在E:\，突然又沒問題了。
 
 [註2] : 從 https://github.com/microsoft/cpprestsdk/wiki/How-to-build-for-Windows 學到，裡面是x64，另外搜尋一些文章得知參數改成Win32就可以輸出為32位元的版本
