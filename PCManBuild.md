@@ -15,7 +15,7 @@ PCMan程式專案建置和執行：逐步解說
 1. git clone vcpkg (https://github.com/Microsoft/vcpkg) 到本機
    * clone完成後，依照官方頁面教學，點兩下執行vcpkg\bootstrap-vcpkg.bat
    * 執行完成後會出現 vcpkg\vcpkg.exe
-   * 將整個 vcpkg 資料夾複製到C:\   
+   * 將整個 vcpkg 資料夾複製到C:\   [註1]
    
    
 
@@ -28,7 +28,10 @@ PCMan程式專案建置和執行：逐步解說
    * 
 
 
-[註1] :  
+[註1] : 我原本先把vcpkg裝在E:\ ，然後跑`integrate install`會出現`Warning: integration was not applied`訊息，雖然看到Warning先繼續安裝相關的套件完成，安裝完成後發現在visual studio裡面的cpp檔相關的`#include`還是會出現紅線錯誤。後來搜尋 https://github.com/Microsoft/vcpkg/issues/5956 提到
+`I have reinstalled vcpkg directly to the c-drive and now it is working, even if I don't know why. Thank you for the support.`，我改放到C:\底下，重新執行`integrate install`就得到`Applied user-wide integration for this vcpkg root.`訊息，cpp檔裡面的`#include`也正常了。
+
+
 
 這份文件說明開發和釋出的需求
 
