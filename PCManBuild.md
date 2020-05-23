@@ -54,6 +54,7 @@ PCMan程式專案建置和執行：逐步解說
 1. 執行 PCMan
    * 在 Lite 或 Combo 專案 > 右鍵 > Set as StartUp Project(設定為起始專案) > 按下 F5 ， 即可執行出現PCMan的程式畫面
 
+.
 
 [註1] : 我原本先把vcpkg裝在E:\ ，然後跑`integrate install`會出現`Warning: integration was not applied`訊息，雖然看到Warning先繼續安裝相關的套件完成，安裝完成後發現在visual studio裡面的cpp檔相關的`#include`還是會出現紅線錯誤。後來搜尋 https://github.com/Microsoft/vcpkg/issues/5956 提到
 `I have reinstalled vcpkg directly to the c-drive and now it is working, even if I don't know why. Thank you for the support.`，我改放到C:\底下，重新執行`integrate install`就得到`Applied user-wide integration for this vcpkg root.`訊息，cpp檔裡面的`#include`也正常了。但是刪掉vcpkg在重裝在E:\，突然又沒問題了。
