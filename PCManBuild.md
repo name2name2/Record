@@ -16,7 +16,7 @@ PCMan程式專案建置和執行：逐步解說
    * 執行完成後會出現 vcpkg\vcpkg.exe
    * 開啟cmd，執行`cd /d 本機Git資料夾\vcpkg`，再執行`vcpkg integrate install`
       * 正確會印出訊息 `Applied user-wide integration for this vcpkg root.` 
-      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [*註1](#reamrk)
+      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [#註1](#reamrk)
 
 1. 使用vcpkg安裝套件
    * 將cmd的路徑保持在`本機Git資料夾\vcpkg`，以下開始用cmd安裝x86版本的pacakage
