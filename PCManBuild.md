@@ -16,7 +16,7 @@ PCMan程式專案建置和執行：逐步解說
    * 執行完成後會出現 vcpkg\vcpkg.exe
    * 開啟cmd，執行`cd /d 本機Git資料夾\vcpkg`，再執行`vcpkg integrate install`
       * 正確會印出訊息 `Applied user-wide integration for this vcpkg root.` 
-      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [[註1]](#remark)
+      * 如果出現 `Warning: integration was not applied`，則將整個vcpkg資料夾複製到C:\ ，再執行`cd /d C:\vcpkg` ，再執行 `vcpkg integrate install`。後面步驟的vcpkg路徑都要改成 C:\vcpkg  [[註1]](#remark)
 
 1. 使用vcpkg安裝套件
    * 將cmd的路徑保持在`本機Git資料夾\vcpkg`，以下開始用cmd安裝x86版本的pacakage
@@ -45,7 +45,7 @@ PCMan程式專案建置和執行：逐步解說
 1. 設定/建置PCMan專案
    * 用 visual studio 開啟 `本機Git資料夾\pcman-windows\PCMan.sln`
    * 開啟後等待 visual studio 載入，等到左下角訊息不再變動
-   * 在 Combo 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `本機Git資料夾\pcman-windows\Combo\cpprest141_2_10d.lib;` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
+   * 在 Combo 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `;本機Git資料夾\pcman-windows\Combo\cpprest141_2_10d.lib` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
    * 在 Combo 專案 > 右鍵 > Build(建置) ，等待建置成功
    * 在 Lite 專案 > 右鍵 > Properties(屬性) > Linker > All Options > 設定頁面往上滾動 > Additional Dependencies > 在現有參數後方加上 `;本機Git資料夾\pcman-windows\Lite\cpprest141_2_10d.lib` ， 小心不要覆蓋掉全部的值(發現蓋掉全部的值可按Esc還原)，是加在現有值的後方
    * 在 Lite 專案 > 右鍵 > Build(建置) ，等待建置成功
